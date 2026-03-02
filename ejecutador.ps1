@@ -1,6 +1,6 @@
 ## ConfiguraciÃ³n de - Recursos
 $Host.UI.RawUI.WindowTitle = "SteamNexus | Instalador de Recursos"
-$LuasUrl = "https://github.com/T-rex21/lisence/pack.zip"
+$LuasUrl = "https://github.com/T-rex21/lisence/releases/download/v1.0.0/pack.zip"
 
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 chcp 65001 > $null
