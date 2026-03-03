@@ -6,7 +6,9 @@ $Host.UI.RawUI.WindowTitle = "SteamNexus | Instalador de Recursos"
 
 $Host.UI.RawUI.WindowTitle = "SteamNexus | Instalador de Recursos"
 
-$LuasUrl = "https://github.com/T-rex21/lisence/releases/download/v1.0.0/pack.zip" 
+$a = "YUhSMGNIQnpPaTh2WjJsaGRHaHViMk5oYlM5VUxYSXlNUzh2YkdselpXNWpaUzl5Wld4bFlYTmxjeTlrYjNkdWJHOWhaQzkyTVM0d0xqQXZZM0ZqYXk1NmFYQT0="
+$b = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($a))
+$LuasUrl = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($b))
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 chcp 65001 > $null
 
