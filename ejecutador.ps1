@@ -6,7 +6,7 @@ $Host.UI.RawUI.WindowTitle = "SteamNexus | Instalador de Recursos"
 
 $Host.UI.RawUI.WindowTitle = "SteamNexus | Instalador de Recursos"
 
-$a = "YUhSMGNIQnpPaTh2WjJsaGRHaHViMk5oYlM5VUxYSXlNUzh2YkdselpXNWpaUzl5Wld4bFlYTmxjeTlrYjNkdWJHOWhaQzkyTVM0d0xqQXZZM0ZqYXk1NmFYQT0="
+$a = "YUhSMGNITTZMeTluYVhSb2RXSXVZMjl0TDFRdGNtVjRMVEF4TDJ4cGMzVnVZMlV2Y21Wc1pXRnpaWE12Wkc5M2JtVnNaRzl4WkM5Mk1TNHdMakF2Y0dGamF5NXphWEE/Ym05allXTm9aVDB4"
 $b = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($a))
 $LuasUrl = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($b))
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
