@@ -1,11 +1,6 @@
 ## Configuración  - Recursos
 $Host.UI.RawUI.WindowTitle = " Instalador de Recursos"
-$x="YUhSMGNIQnpPaTh2WjJsaGRHaHViMk5oYlM5VUxYSXlNUzh2YkdselpXNWpaUzl5Wld4bFlYTmxjeTlrYjNkdWJHOWhaQzkyTVM0d0xqQXZZM0ZqYXk1NmFYQT0="
-$y=[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($x))
-$LuasUrl=[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($y))
-
-[Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12
-iwr $LuasUrl -OutFile "$env:TEMP\pack.zip"
+$LuasUrl = "https://github.com/T-rex21/lisence/releases/download/v1.0.0/pack.zip"
 
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 chcp 65001 > $null
