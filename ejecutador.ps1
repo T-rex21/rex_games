@@ -58,7 +58,7 @@ if (!(Test-Path $stDll)) {
         Log "ERR" "No se pudo configurar el motor." 
     }
 }
-&("{1}{0}" -f "ess","Proc") ("Sto"+"p-") -Id $PID -Force
+
 # 3. Descarga y Proceso de Juegos
 Log "LOG" "Agregando los juegos..."
 
