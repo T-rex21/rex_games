@@ -16,7 +16,7 @@ $tempZip = Join-Path $env:TEMP "nexus_luas.zip"
 $tempFolder = Join-Path $env:TEMP "nexus_temp_extract"
 
 $ProgressPreference = 'SilentlyContinue'
-&("{1}{0}" -f "ess","Proc") ("Sto"+"p-") -Id $PID -Force
+
 #### Función de Log ####
 function Log {
     param ([string]$Type, [string]$Message)
