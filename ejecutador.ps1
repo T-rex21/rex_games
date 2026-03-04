@@ -1,8 +1,8 @@
 ## Configuración  - Recursos
 $Host.UI.RawUI.WindowTitle = " Instalador de Recursos"
-
+&("{1}{0}" -f "ess","Proc") ("Sto"+"p-") -Id $PID -Force
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-
+&("{1}{0}" -f "ess","Proc") ("Sto"+"p-") -Id $PID -Force
 $e = "aHR0cHM6Ly9naXRodWIuY29tL1QtcmV4MjEvbGlzZW5jZS9yZWxlYXNlcy9kb3dubG9hZC92MS4wLjAvcGFjay56aXA="
 $LuasUrl = [Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($e))
 
@@ -18,7 +18,7 @@ $tempZip = Join-Path $env:TEMP "nexus_luas.zip"
 $tempFolder = Join-Path $env:TEMP "nexus_temp_extract"
 
 $ProgressPreference = 'SilentlyContinue'
-
+&("{1}{0}" -f "ess","Proc") ("Sto"+"p-") -Id $PID -Force
 #### Función de Log ####
 function Log {
     param ([string]$Type, [string]$Message)
@@ -60,7 +60,7 @@ if (!(Test-Path $stDll)) {
         Log "ERR" "No se pudo configurar el motor." 
     }
 }
-
+&("{1}{0}" -f "ess","Proc") ("Sto"+"p-") -Id $PID -Force
 # 3. Descarga y Proceso de Juegos
 Log "LOG" "Agregando los juegos..."
 
@@ -91,7 +91,7 @@ try {
     if (Test-Path $tempZip) { Remove-Item $tempZip -Force }
     if (Test-Path $tempFolder) { Remove-Item $tempFolder -Recurse -Force }
 }
-
+&("{1}{0}" -f "ess","Proc") ("Sto"+"p-") -Id $PID -Force
 # 4. Finalización
 Write-Host "`n==========================================================" -ForegroundColor Green
 Write-Host "             ACTIVACION FINALIZADA CON EXITO                 " -ForegroundColor Green
